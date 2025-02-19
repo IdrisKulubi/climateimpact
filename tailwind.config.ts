@@ -100,6 +100,42 @@ export default {
   				'0%': { transform: 'translateX(-50%)', opacity: 0.4 },
   				'50%': { transform: 'translateX(50%)', opacity: 1 },
   				'100%': { transform: 'translateX(-50%)', opacity: 0.4 },
+  			},
+  			marquee: {
+  				'0%': { transform: 'translateX(0%)' },
+  				'100%': { transform: 'translateX(-50%)' },
+  			},
+  			'counter': {
+  				'0%': { opacity: 0, transform: 'translateY(20px)' },
+  				'100%': { opacity: 1, transform: 'translateY(0)' },
+  			},
+  			'float-1': {
+  				'0%, 100%': { transform: 'translate(-50%, -50%) scale(1)' },
+  				'50%': { transform: 'translate(-50%, -50%) scale(1.05) translate(40px, -20px)' },
+  			},
+  			'float-2': {
+  				'0%, 100%': { transform: 'translate(-50%, -50%) scale(1)' },
+  				'50%': { transform: 'translate(-50%, -50%) scale(1.05) translate(-30px, 30px)' },
+  			},
+  			'float-3': {
+  				'0%, 100%': { transform: 'translate(-50%, -50%) scale(1)' },
+  				'50%': { transform: 'translate(-50%, -50%) scale(1.05) translate(20px, 20px)' },
+  			},
+  			glow: {
+  				'0%': { backgroundPosition: '200% 50%' },
+  				'100%': { backgroundPosition: '-200% 50%' },
+  			},
+  			ctaBlur1: {
+  				'0%, 100%': { transform: 'translate(-50%, -50%) scale(1)' },
+  				'50%': { transform: 'translate(-50%, -50%) scale(1.2) rotate(20deg)' },
+  			},
+  			ctaBlur2: {
+  				'0%, 100%': { transform: 'translate(-50%, -50%) scale(1)' },
+  				'50%': { transform: 'translate(-50%, -50%) scale(0.8) rotate(-20deg)' },
+  			},
+  			float: {
+  				'0%, 100%': { transform: 'translateY(0)' },
+  				'50%': { transform: 'translateY(-20px)' },
   			}
   		},
   		animation: {
@@ -113,6 +149,15 @@ export default {
   			'shape-rotate': 'shapeRotate 15s linear infinite',
   			'shape-pulse': 'shapePulse 20s cubic-bezier(0.4, 0, 0.6, 1) infinite',
   			'line-horizontal': 'lineHorizontal 8s linear infinite',
+  			'marquee': 'marquee 40s linear infinite',
+  			'counter': 'counter 2s ease-out forwards',
+  			'float-1': 'float-1 20s ease-in-out infinite',
+  			'float-2': 'float-2 25s ease-in-out infinite',
+  			'float-3': 'float-3 30s ease-in-out infinite',
+  			'glow': 'glow 6s linear infinite',
+  			'cta-blur-1': 'ctaBlur1 25s infinite',
+  			'cta-blur-2': 'ctaBlur2 30s infinite',
+  			'float': 'float 6s ease-in-out infinite',
   		}
   	}
   },

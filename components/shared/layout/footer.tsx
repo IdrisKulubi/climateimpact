@@ -1,10 +1,16 @@
+
+"use client"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { SiLinkedin, SiYoutube } from "react-icons/si"
+import { useTheme } from "next-themes"
+import { Moon, Sun } from "lucide-react"
 
 export function Footer() {
+  const { theme, setTheme } = useTheme()
+
   return (
     <footer className="border-t bg-gradient-to-b from-background/95 to-background/80 backdrop-blur">
       <div className="container grid gap-12 px-4 py-16 sm:grid-cols-2 md:grid-cols-4 lg:py-24">
@@ -27,12 +33,12 @@ export function Footer() {
           <div className="flex gap-4">
            
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://linkedin.com" aria-label="LinkedIn">
+              <Link href="/" aria-label="LinkedIn">
                 <SiLinkedin className="h-5 w-5" />
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://youtube.com" aria-label="YouTube">
+              <Link href="/" aria-label="YouTube">
                 <SiYoutube className="h-5 w-5" />
               </Link>
             </Button>
@@ -86,7 +92,17 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Climate Impact Partners. All rights reserved.
           </p>
-          <div className="flex gap-6">
+          <div className="flex items-center gap-6">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              className="h-9 w-9 rounded-md"
+              aria-label="Toggle theme"
+            >
+              <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </Button>
             <FooterLink href="/privacy" className="text-sm">Privacy Policy</FooterLink>
             <FooterLink href="/terms" className="text-sm">Terms of Service</FooterLink>
             <FooterLink href="/accessibility" className="text-sm">Accessibility</FooterLink>
