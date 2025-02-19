@@ -82,11 +82,37 @@ export default {
   				to: {
   					height: '0'
   				}
+  			},
+  			particle: { /* ... particle keyframes ... */ },
+  			spotlight: { /* ... spotlight keyframes ... */ },
+  			'blob-1': { /* ... blob-1 keyframes ... */ },
+  			'blob-2': { /* ... blob-2 keyframes ... */ },
+  			gridFade: { /* ... gridFade keyframes ... */ },
+  			'shapeRotate': {
+  				'0%, 100%': { transform: 'rotate(0deg) scale(1)' },
+  				'50%': { transform: 'rotate(180deg) scale(1.1)' },
+  			},
+  			'shapePulse': {
+  				'0%, 100%': { transform: 'scale(1)' },
+  				'50%': { transform: 'scale(1.1)' },
+  			},
+  			'lineHorizontal': {
+  				'0%': { transform: 'translateX(-50%)', opacity: 0.4 },
+  				'50%': { transform: 'translateX(50%)', opacity: 1 },
+  				'100%': { transform: 'translateX(-50%)', opacity: 0.4 },
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			'particle': 'particle 6s linear infinite',
+  			'spotlight': 'spotlight 12s linear infinite',
+  			'blob-1': 'blob-1 20s infinite',
+  			'blob-2': 'blob-2 25s infinite',
+  			'grid-fade': 'gridFade 2s linear infinite',
+  			'shape-rotate': 'shapeRotate 15s linear infinite',
+  			'shape-pulse': 'shapePulse 20s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+  			'line-horizontal': 'lineHorizontal 8s linear infinite',
   		}
   	}
   },
