@@ -4,6 +4,8 @@ import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-m
 import { mainNavItems } from "@/config/navigation"
 import { DesktopNavItem } from "./desktop-nav-item"
 
+
+
 export function DesktopNav() {
   return (
     <NavigationMenu className="hidden lg:flex">

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import animate from "tailwindcss-animate"
 
 export default {
     darkMode: ["class"],
@@ -97,17 +98,17 @@ export default {
   				'50%': { transform: 'scale(1.1)' },
   			},
   			'lineHorizontal': {
-  				'0%': { transform: 'translateX(-50%)', opacity: 0.4 },
-  				'50%': { transform: 'translateX(50%)', opacity: 1 },
-  				'100%': { transform: 'translateX(-50%)', opacity: 0.4 },
+  				'0%': { transform: 'translateX(-50%)', opacity: '0.4' },
+  				'50%': { transform: 'translateX(50%)', opacity: '1' },
+  				'100%': { transform: 'translateX(-50%)', opacity: '0.4' },
   			},
   			marquee: {
   				'0%': { transform: 'translateX(0%)' },
   				'100%': { transform: 'translateX(-50%)' },
   			},
   			'counter': {
-  				'0%': { opacity: 0, transform: 'translateY(20px)' },
-  				'100%': { opacity: 1, transform: 'translateY(0)' },
+  				'0%': { opacity: '0', transform: 'translateY(20px)' },
+  				'100%': { opacity: '1', transform: 'translateY(0)' },
   			},
   			'float-1': {
   				'0%, 100%': { transform: 'translate(-50%, -50%) scale(1)' },
@@ -161,5 +162,5 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animate],
 } satisfies Config;

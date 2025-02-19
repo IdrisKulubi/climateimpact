@@ -9,15 +9,8 @@ import {
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
+import { NavItem } from "@/types/nav"
 
-interface NavItem {
-  title: string;
-  href: string;
-  children?: {
-    title: string;
-    href: string;
-  }[];
-}
 
 interface DesktopNavItemProps {
   item: NavItem;
